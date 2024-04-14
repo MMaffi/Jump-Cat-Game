@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: linear-gradient(blue, red);
+}
+
+.texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+}
+
+.gameboard {
+    bottom: 50%;
+    width: 600px;
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(images/Cenario.png);
+    background-size: cover;
+}
+
+.obstaculo {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: obstaculo-animacao 1.2s infinite linear;
+}
+
+.gato {
+    width: 130px;
+    position: absolute;
+    bottom: 0;
+    right: 65%;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes obstaculo-animacao {
+    from{
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    65% {
+        bottom: 180px
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
