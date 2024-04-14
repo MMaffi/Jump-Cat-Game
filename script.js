@@ -28,7 +28,6 @@ const loop = setInterval(() => {
         // gato.src = 'images/game-over.png'
 
         clearInterval(loop);
-
     }
 
 }, 10);
